@@ -30,7 +30,7 @@ export default function Home() {
       <Head>
         <title>Cookie Stand Admin</title>
       </Head>
-      <body className="flex flex-col min-h-screen">
+      <div className="flex flex-col min-h-screen">
         <header className="p-4 text-white bg-green-500">
           <h1 className="text-4xl">Cookie Stand Admin</h1>
         </header>
@@ -97,7 +97,7 @@ export default function Home() {
         <footer className="p-4 text-center text-white bg-gray-500">
           &copy; ASAC 2023
         </footer>
-      </body>
+      </div>
     </div>
   );
 }
