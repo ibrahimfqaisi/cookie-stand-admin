@@ -35,45 +35,20 @@ export default function Output(props) {
               </thead>
               {/* table body */}
               <tbody>
-                {props.handeler2.map(obj => (
+                {props.handeler2.map((obj ,index)=> (
                   <tr key={obj.id}>
                     <td className='border border-black '>{obj.location}</td>
-                    <td className='border border-black '>{hourly_sales[0]}</td>
-                    <td className='border border-black '>{hourly_sales[1]}</td>
-                    <td className='border border-black '>{hourly_sales[2]}</td>
-                    <td className='border border-black '>{hourly_sales[3]}</td>
-                    <td className='border border-black '>{hourly_sales[4]}</td>
-                    <td className='border border-black '>{hourly_sales[5]}</td>
-                    <td className='border border-black '>{hourly_sales[6]}</td>
-                    <td className='border border-black '>{hourly_sales[7]}</td>
-                    <td className='border border-black '>{hourly_sales[8]}</td>
-                    <td className='border border-black '>{hourly_sales[9]}</td>
-                    <td className='border border-black '>{hourly_sales[10]}</td>
-                    <td className='border border-black '>{hourly_sales[11]}</td>
-                    <td className='border border-black '>{hourly_sales[12]}</td>
-                    <td className='border border-black '>{hourly_sales[13]}</td>
-                    <td className='border border-black '>{hourly_sales[14]}</td>
-  
+                    {hourly_sales.map((sales, index) => (
+                    <td key={index}  className='border border-black '>{sales}</td>
+                    ))}
+
                   </tr>
                 ))}
                 <tr>
-                  <td className='border border-black '>Total</td>
-                  <td className='border border-black '>{hourly_sales[0] * props.handeler}</td>
-                  <td className='border border-black '>{hourly_sales[1] * props.handeler}</td>
-                  <td className='border border-black '>{hourly_sales[2] * props.handeler}</td>
-                  <td className='border border-black '>{hourly_sales[3] * props.handeler}</td>
-                  <td className='border border-black '>{hourly_sales[4] * props.handeler}</td>
-                  <td className='border border-black '>{hourly_sales[5] * props.handeler}</td>
-                  <td className='border border-black '>{hourly_sales[6] * props.handeler}</td>
-                  <td className='border border-black '>{hourly_sales[7] * props.handeler}</td>
-                  <td className='border border-black '>{hourly_sales[8] * props.handeler}</td>
-                  <td className='border border-black '>{hourly_sales[9] * props.handeler}</td>
-                  <td className='border border-black '>{hourly_sales[10] * props.handeler}</td>
-                  <td className='border border-black '>{hourly_sales[11] * props.handeler}</td>
-                  <td className='border border-black '>{hourly_sales[12] * props.handeler}</td>
-                  <td className='border border-black '>{hourly_sales[13] * props.handeler}</td>
-                  <td className='border border-black '>{hourly_sales[14] * props.handeler}</td>
-  
+                  <td   className='border border-black '>{'Total' }</td>
+                {hourly_sales.map((sales, index) => (
+                    <td key={index}  className='border border-black '>{sales*props.handeler }</td>
+                    ))}
   
                 </tr>
               </tbody>
