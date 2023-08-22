@@ -120,9 +120,9 @@ export default function Home() {
     const newCookieStand = {
       id: cookieStands.length + 1, // Generate a unique ID
       location: event.target.location.value,
-      minCustomersPerHour: parseInt(event.target.minCustomersPerHour.value),
-      maxCustomersPerHour: parseInt(event.target.maxCustomersPerHour.value),
-      avgCookiesPerSale: parseFloat(event.target.avgCookiesPerSale.value),
+      minimum_customers_per_hour: parseInt(event.target.minCustomersPerHour.value),
+      maximum_customers_per_hour: parseInt(event.target.maxCustomersPerHour.value),
+      average_cookies_per_sale: parseFloat(event.target.avgCookiesPerSale.value),
     };
     // Update the cookie stands state with the new cookie 
     postDataToProtectedRoute( newCookieStand)
